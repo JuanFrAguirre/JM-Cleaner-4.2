@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <script
+      src="https://kit.fontawesome.com/878d9d86f6.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&family=Roboto+Slab:wght@400;700;900&family=Roboto:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.min.css" />
+
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <!-- BODY START---------------------------------------- -->
+  <body>
+    <!-- HEADER ---------------------------------------- -->
+    <header>
+      <div class="header contenedor">
+        <div class="logo">
+          <a href="./index.html">
+            <h1 id="titulo-pagina">JM Cleaner</h1>
+          </a>
+        </div>
+        <div class="nav-btn">
+          <div class="linea linea1"></div>
+          <div class="linea linea2"></div>
+          <div class="linea linea3"></div>
+        </div>
+        <div class="nav-links">
+          <a href="./index.html">Inicio</a>
+          <a href="#">Productos</a>
+          <a href="#">Tiendas</a>
+          <a href="#">Compañía</a>
+          <a href="#">Ventas</a>
+          <a href="#">Contacto</a>
+        </div>
+      </div>
+    </header>
+    <!-- HEADER ---------------------------------------- -->
+
+    <!-- MAIN ---------------------------------------- -->
+    <main>
+      <!-- PRESENTACION ---------------------------------------- -->
+      <section class="contenedor-presentacion">
+        <!-- <video
+          autoplay
+          muted
+          loop
+          id="my-video"
+          src="./img/man-video.mp4"
+          type="video/mp4"
+        ></video> -->
+        <div class="contenedor presentacion">
+          <div class="cartel">
+            <p>
+              ¿Cansado de tus anteojos empañados?<br />
+              <span>Tenemos la solución!</span>
+            </p>
+            <div class="buttons">
+              <a href="#">Más info</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- PRESENTACION ---------------------------------------- -->
+
+      <!-- EMPRESA ---------------------------------------- -->
+      <section class="contenedor-empresa">
+        <div class="contenedor empresa">
+          <h2>¿Qué es JM Cleaner?</h2>
+          <p>
+            JM Cleaner es un líquido especialmente formulado para limpiar
+            cristales de anteojos, gafas de sol, visores de cascos, entre otros,
+            de la manera menos abrasiva para los cristales.<br />
+            Además deja una película protectora que impide que se condense el
+            vapor del aire cuando, por ejemplo, utilizamos un barbijo o
+            tapabocas, o cuando tomamos una bebida caliente. A esto se le llama
+            propiedad <em>anti-fog</em>.
+          </p>
+        </div>
+      </section>
+      <!-- EMPRESA ---------------------------------------- -->
+
+      <!-- CONTACTO ---------------------------------------- -->
+      <section class="contenedor-contacto">
+        <div class="contenedor contacto">
+          <h3>¡Conseguí el tuyo ahora!</h3>
+          <a href="#">Contacto</a>
+        </div>
+      </section>
+      <!-- CONTACTO ---------------------------------------- -->
+
+      <!-- TESTIMONIALES ---------------------------------------- -->
+      <section class="contenedor-testimoniales">
+        <div class="contenedor testimoniales">
+          <h2>Testimonios</h2>
+          <div class="testimonial">
+            <div class="titulo-testimonial">
+              <h4>Jose Maria Hugo Pedrozo</h4>
+            </div>
+            <div class="contenido-testimonial">
+              <div class="quote"></div>
+              <div class="texto-testimonial">
+                <p>
+                  El producto no contiene alcohol ni otros componentes que dañen
+                  el cristal del lente, eso es algo muy importante, ya que
+                  protege y cuida la vida útil de mis anteojos
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <div class="titulo-testimonial">
+              <h4>Jose Maria Hugo Pedrozo</h4>
+            </div>
+            <div class="contenido-testimonial">
+              <div class="quote"></div>
+              <div class="texto-testimonial">
+                <p>
+                  El producto no contiene alcohol ni otros componentes que dañen
+                  el cristal del lente, eso es algo muy importante, ya que
+                  protege y cuida la vida útil de mis anteojos
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <div class="titulo-testimonial">
+              <h4>Jose Maria Hugo Pedrozo</h4>
+            </div>
+            <div class="contenido-testimonial">
+              <div class="quote"></div>
+              <div class="texto-testimonial">
+                <p>
+                  El producto no contiene alcohol ni otros componentes que dañen
+                  el cristal del lente, eso es algo muy importante, ya que
+                  protege y cuida la vida útil de mis anteojos
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- TESTIMONIALES ---------------------------------------- -->
+    </main>
+    <!-- MAIN ---------------------------------------- -->
+
+    <!-- FOOTER ---------------------------------------- -->
+    <footer>
+      <div class="contenedor footer">
+        <div class="mapa">
+          <h4>Dónde encontrarnos</h4>
+          <div id="id-mapa"></div>
+          <a href="#">Ver listado completo</a>
+        </div>
+        <div class="redes">
+          <div class="presentacion-redes">
+            <h4>Encontranos también en nuestras redes</h4>
+            <div class="links-redes">
+              <a href="http://instagram.com" class="instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="http://twitter.com" class="twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="http://facebook.com" class="facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="mailto:contacto@jm-cleaner.com" class="mail">
+                <i class="far fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright"></div>
+    </footer>
+    <!-- FOOTER ---------------------------------------- -->
+
+    <!-- ---------------------------------------- -->
+    <!-- ---------------------------------------- -->
+
+    <!-- SCRIPTS ---------------------------------------- -->
+    <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+      window.ga = function () {
+        ga.q.push(arguments);
+      };
+      ga.q = [];
+      ga.l = +new Date();
+      ga("create", "UA-XXXXX-Y", "auto");
+      ga("set", "anonymizeIp", true);
+      ga("set", "transport", "beacon");
+      ga("send", "pageview");
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async></script>
+    <!-- SCRIPTS ---------------------------------------- -->
+  </body>
+  <!-- BODY END---------------------------------------- -->
+</html>
