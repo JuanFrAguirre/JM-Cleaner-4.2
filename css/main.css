@@ -77,15 +77,16 @@ textarea {
 }
 
 ::-webkit-scrollbar {
-  width: 2rem;
+  width: 1.5rem;
 }
 
 ::-webkit-scrollbar-track {
-  background: #05679c;
+  background: #01213b;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(35, 184, 236, 0.5);
+  background: #fff;
+  border: 1px solid #05679c;
 }
 
 header {
