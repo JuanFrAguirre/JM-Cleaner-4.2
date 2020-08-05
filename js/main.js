@@ -1,3 +1,5 @@
+// barra de navegacion
+
 const navButton = document.querySelector(".nav-btn");
 const navMenu = document.querySelector(".nav-links");
 const header = document.querySelector("header");
@@ -18,3 +20,16 @@ navButton.addEventListener("click", () => {
     header.style.height = "10rem";
   }
 });
+
+// mapa
+
+var map = L.map("id-mapa").setView([-31.409619, -64.187965], 11);
+
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  attribution:
+    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+}).addTo(map);
+
+L.marker([-31.410237, -64.199145]).addTo(map);
+// .bindPopup("Aca tenes que elegir donde estan las farmacias, Hugo.")
+// .openPopup();
