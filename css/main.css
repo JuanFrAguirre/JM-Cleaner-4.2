@@ -415,13 +415,13 @@ header .header .nav-links.menuAbierto a:nth-child(6) {
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
   font-size: 2rem;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .contenedor-presentacion .presentacion .cartel .buttons a:hover {
   background-color: #23B8EC;
   color: #fff;
-  border: 1px solid #23B8EC;
+  border: 2px solid #23B8EC;
   font-size: 2rem;
 }
 
@@ -442,6 +442,7 @@ header .header .nav-links.menuAbierto a:nth-child(6) {
           justify-content: space-evenly;
   height: 100%;
   min-height: Min(80vh, 80rem);
+  overflow: hidden;
 }
 
 .contenedor-empresa .empresa h2 {
@@ -465,22 +466,22 @@ header .header .nav-links.menuAbierto a:nth-child(6) {
 .contenedor-empresa .empresa p {
   text-align: justify;
   padding: 3rem 3rem;
+  position: relative;
 }
 
 .contenedor-empresa .empresa p em {
   color: #23B8EC;
   cursor: pointer;
-  position: relative;
 }
 
 .contenedor-empresa .empresa p em:hover::before {
   content: "¡El anti-fog es aún más práctico en estos tiempos de pandemia, evita la molestia de desempañarse los lentes todo el tiempo!";
-  position: fixed;
-  bottom: 100%;
+  position: absolute;
+  bottom: 0%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  width: 30rem;
+  width: 100%;
   height: auto;
   padding: 1rem;
   font-size: 1.1rem;
@@ -728,7 +729,7 @@ footer .footer .mapa .ver-listado a {
 
 footer .footer .mapa .ver-listado:hover {
   background-color: #23B8EC;
-  border: 1px solid #23B8EC;
+  border: 2px solid #23B8EC;
 }
 
 footer .footer .mapa .ver-listado:hover a {
