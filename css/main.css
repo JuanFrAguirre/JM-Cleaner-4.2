@@ -323,12 +323,25 @@ header .header .nav-links.menuAbierto a:nth-child(6) {
 }
 
 .contenedor-presentacion {
-  background-image: url(../img/libro.jpg);
+  background-image: url(../img/fog2.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: left;
   background-attachment: fixed;
   position: relative;
   z-index: 5;
+}
+
+@media (min-width: 768px), (orientation: landscape) {
+  .contenedor-presentacion {
+    background-image: url(../img/fog1.jpg);
+    background-position: top;
+  }
+}
+
+@media (orientation: portrait) {
+  .contenedor-presentacion {
+    background-image: url(../img/fog2.jpg);
+  }
 }
 
 .contenedor-presentacion::before {
@@ -445,10 +458,28 @@ header .header .nav-links.menuAbierto a:nth-child(6) {
   overflow: hidden;
 }
 
+@media (min-width: 768px) {
+  .contenedor-empresa .empresa {
+    min-height: 100vh;
+  }
+}
+
 .contenedor-empresa .empresa h2 {
   color: #000;
   position: relative;
   font-size: 3rem;
+}
+
+@media (min-width: 768px) {
+  .contenedor-empresa .empresa h2 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contenedor-empresa .empresa h2 {
+    font-size: 4rem;
+  }
 }
 
 .contenedor-empresa .empresa h2::after {
@@ -469,15 +500,29 @@ header .header .nav-links.menuAbierto a:nth-child(6) {
   position: relative;
 }
 
+@media (min-width: 768px) {
+  .contenedor-empresa .empresa p {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contenedor-empresa .empresa p {
+    font-size: 2.5rem;
+  }
+}
+
 .contenedor-empresa .empresa p em {
   color: #23B8EC;
   cursor: pointer;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .contenedor-empresa .empresa p em:hover::before {
   content: "¡El anti-fog es aún más práctico en estos tiempos de pandemia, evita la molestia de desempañarse los lentes todo el tiempo!";
   position: absolute;
-  bottom: 0%;
+  top: 70%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -490,10 +535,28 @@ header .header .nav-links.menuAbierto a:nth-child(6) {
   color: #fff;
 }
 
+@media (min-width: 480px) {
+  .contenedor-empresa .empresa p em:hover::before {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .contenedor-empresa .empresa p em:hover::before {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contenedor-empresa .empresa p em:hover::before {
+    font-size: 2rem;
+  }
+}
+
 .contenedor-contacto {
-  background: url(../img/cafe2.jpg);
+  background: url(../img/cafe.jpg);
   background-size: cover;
-  background-position: right;
+  background-position: 80%;
   background-attachment: fixed;
   height: Min(80vh, 80rem);
   display: -webkit-box;
@@ -504,6 +567,13 @@ header .header .nav-links.menuAbierto a:nth-child(6) {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
+}
+
+@media (min-width: 1024px), (orientation: landscape) {
+  .contenedor-contacto {
+    background-image: url(../img/chica-lentes.jpg);
+    background-position: right;
+  }
 }
 
 .contenedor-contacto::before {
@@ -546,11 +616,11 @@ header .header .nav-links.menuAbierto a:nth-child(6) {
   text-transform: uppercase;
   font-size: 2rem;
   font-weight: 700;
-  letter-spacing: .25rem;
+  letter-spacing: 0.25rem;
   border: 2px solid #fff;
   padding: 1rem 2rem;
-  -webkit-transition: .3s all ease-in-out;
-  transition: .3s all ease-in-out;
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 }
@@ -602,16 +672,26 @@ header .header .nav-links.menuAbierto a:nth-child(6) {
 }
 
 .contenedor-testimoniales .contenedor .testimoniales {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+@media (min-width: 768px), (orientation: landscape) {
+  .contenedor-testimoniales .contenedor .testimoniales {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 2.5%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contenedor-testimoniales .contenedor .testimoniales {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .contenedor-testimoniales .contenedor .testimoniales .testimonial {
@@ -623,9 +703,22 @@ header .header .nav-links.menuAbierto a:nth-child(6) {
   border-radius: 5px;
 }
 
-.contenedor-testimoniales .contenedor .testimoniales .testimonial .titulo-testimonial h4 {
+@media (min-width: 768px) {
+  .contenedor-testimoniales .contenedor .testimoniales .testimonial {
+    width: 100%;
+  }
+}
+
+.contenedor-testimoniales .contenedor .testimoniales .testimonial .titulo-testimonial {
   text-align: center;
+}
+
+.contenedor-testimoniales .contenedor .testimoniales .testimonial .titulo-testimonial h4 {
   font-size: 2rem;
+}
+
+.contenedor-testimoniales .contenedor .testimoniales .testimonial .titulo-testimonial h5 {
+  color: #666;
 }
 
 .contenedor-testimoniales .contenedor .testimoniales .testimonial .contenido-testimonial {
@@ -634,6 +727,7 @@ header .header .nav-links.menuAbierto a:nth-child(6) {
   -ms-grid-columns: 1fr 6fr;
       grid-template-columns: 1fr 6fr;
   gap: 1rem;
+  padding: 0 3rem 0 1rem;
 }
 
 .contenedor-testimoniales .contenedor .testimoniales .testimonial .contenido-testimonial .quote {
@@ -648,7 +742,6 @@ header .header .nav-links.menuAbierto a:nth-child(6) {
 }
 
 .contenedor-testimoniales .contenedor .testimoniales .testimonial .contenido-testimonial .texto-testimonial {
-  padding-right: 2rem;
   text-align: justify;
 }
 
@@ -699,8 +792,20 @@ footer .footer .mapa h4 {
   margin: 3rem 0 3rem;
 }
 
+@media (min-width: 768px) {
+  footer .footer .mapa h4 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  footer .footer .mapa h4 {
+    font-size: 2.5rem;
+  }
+}
+
 footer .footer .mapa #id-mapa {
-  height: 40rem;
+  height: 60vh;
   width: 100%;
   z-index: 70;
 }
@@ -725,6 +830,18 @@ footer .footer .mapa .ver-listado a {
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: .2rem;
+}
+
+@media (min-width: 768px) {
+  footer .footer .mapa .ver-listado a {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  footer .footer .mapa .ver-listado a {
+    font-size: 2rem;
+  }
 }
 
 footer .footer .mapa .ver-listado:hover {
@@ -753,6 +870,12 @@ footer .footer .redes::before {
   background-color: #23B8EC;
 }
 
+@media (min-width: 768px) {
+  footer .footer .redes::before {
+    width: 150%;
+  }
+}
+
 footer .footer .redes .presentacion-redes {
   display: -ms-grid;
   display: grid;
@@ -761,9 +884,29 @@ footer .footer .redes .presentacion-redes {
   gap: 5rem;
 }
 
+@media (min-width: 768px) {
+  footer .footer .redes .presentacion-redes {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
 footer .footer .redes .presentacion-redes h4 {
   font-size: 1.75rem;
   color: #fff;
+}
+
+@media (min-width: 768px) {
+  footer .footer .redes .presentacion-redes h4 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  footer .footer .redes .presentacion-redes h4 {
+    font-size: 2.5rem;
+  }
 }
 
 footer .footer .redes .presentacion-redes .links-redes {
@@ -794,11 +937,30 @@ footer .footer .redes .presentacion-redes .links-redes a {
   padding: 1rem;
 }
 
+@media (min-width: 768px) {
+  footer .footer .redes .presentacion-redes .links-redes a {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+  }
+}
+
 footer .footer .redes .presentacion-redes .links-redes a i {
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
   color: #fff;
   font-size: 4rem;
+}
+
+@media (min-width: 768px) {
+  footer .footer .redes .presentacion-redes .links-redes a i {
+    font-size: 4.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  footer .footer .redes .presentacion-redes .links-redes a i {
+    font-size: 5rem;
+  }
 }
 
 footer .footer .redes .presentacion-redes .links-redes a:hover i {
@@ -825,6 +987,7 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 *,
