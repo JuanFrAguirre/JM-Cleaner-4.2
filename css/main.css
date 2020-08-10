@@ -307,10 +307,10 @@ header .header .nav-links a {
     color: #23B8EC;
   }
   header .header .nav-links a:hover::after {
-    width: 85%;
+    width: 50%;
   }
   header .header .nav-links a:hover::before {
-    width: 85%;
+    width: 50%;
   }
 }
 
@@ -523,12 +523,6 @@ header .nav-links.menuAbierto a:nth-child(6) {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-@media (min-width: 1024px) {
-  .contenedor-presentacion .presentacion .cartel .buttons a {
-    font-size: 2.5rem;
-  }
-}
-
 .contenedor-presentacion .presentacion .cartel .buttons a:hover {
   background-color: #23B8EC;
   color: #fff;
@@ -605,7 +599,7 @@ header .nav-links.menuAbierto a:nth-child(6) {
 
 @media (min-width: 1024px) {
   .contenedor-empresa .empresa p {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 }
 
@@ -720,12 +714,6 @@ header .nav-links.menuAbierto a:nth-child(6) {
   border-radius: 5px;
 }
 
-@media (min-width: 1024px) {
-  .contenedor-contacto .contacto a {
-    font-size: 2.5rem;
-  }
-}
-
 .contenedor-contacto .contacto a:hover {
   background-color: #23B8EC;
   border: 2px solid #23B8EC;
@@ -760,7 +748,7 @@ header .nav-links.menuAbierto a:nth-child(6) {
 }
 
 .contenedor-testimoniales .contenedor h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   position: relative;
   color: #000;
   margin: 5rem 0 7rem;
@@ -768,7 +756,7 @@ header .nav-links.menuAbierto a:nth-child(6) {
 
 @media (min-width: 1024px) {
   .contenedor-testimoniales .contenedor h2 {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 }
 
@@ -828,6 +816,7 @@ header .nav-links.menuAbierto a:nth-child(6) {
 
 .contenedor-testimoniales .contenedor .testimoniales .testimonial .titulo-testimonial h4 {
   font-size: 2rem;
+  margin: 1rem;
 }
 
 @media (min-width: 1024px) {
@@ -838,11 +827,12 @@ header .nav-links.menuAbierto a:nth-child(6) {
 
 .contenedor-testimoniales .contenedor .testimoniales .testimonial .titulo-testimonial h5 {
   color: #888;
+  margin: 0;
 }
 
 @media (min-width: 1024px) {
   .contenedor-testimoniales .contenedor .testimoniales .testimonial .titulo-testimonial h5 {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 }
 
@@ -868,12 +858,6 @@ header .nav-links.menuAbierto a:nth-child(6) {
 
 .contenedor-testimoniales .contenedor .testimoniales .testimonial .contenido-testimonial .texto-testimonial {
   text-align: justify;
-}
-
-@media (min-width: 1024px) {
-  .contenedor-testimoniales .contenedor .testimoniales .testimonial .contenido-testimonial .texto-testimonial {
-    font-size: 1.75rem;
-  }
 }
 
 footer {
@@ -920,7 +904,19 @@ footer .footer .mapa h4 {
   font-size: 1.75rem;
   color: #fff;
   position: relative;
-  margin: 3rem 0 3rem;
+  margin: 3rem 0 5rem;
+}
+
+footer .footer .mapa h4::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 110%;
+  height: 2px;
+  background-color: #fff;
 }
 
 @media (min-width: 768px) {
@@ -998,12 +994,18 @@ footer .footer .redes::before {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  background-color: #23B8EC;
+  background-color: #fff;
 }
 
 @media (min-width: 768px) {
   footer .footer .redes::before {
     width: 150%;
+  }
+}
+
+@media (min-width: 1200px) {
+  footer .footer .redes::before {
+    width: 80%;
   }
 }
 
@@ -1023,6 +1025,14 @@ footer .footer .redes .presentacion-redes {
   }
 }
 
+@media (min-width: 1200px) {
+  footer .footer .redes .presentacion-redes {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+  }
+}
+
 footer .footer .redes .presentacion-redes h4 {
   font-size: 1.75rem;
   color: #fff;
@@ -1031,6 +1041,7 @@ footer .footer .redes .presentacion-redes h4 {
 @media (min-width: 768px) {
   footer .footer .redes .presentacion-redes h4 {
     font-size: 2rem;
+    margin: 0;
   }
 }
 
@@ -1072,6 +1083,8 @@ footer .footer .redes .presentacion-redes .links-redes a {
   footer .footer .redes .presentacion-redes .links-redes a {
     -ms-flex-preferred-size: 25%;
         flex-basis: 25%;
+    padding: 0;
+    margin: 0;
   }
 }
 
