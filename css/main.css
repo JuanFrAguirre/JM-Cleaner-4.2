@@ -131,11 +131,29 @@ header .header .logo a h1 {
           transition-delay: -.2s;
 }
 
+@media (min-width: 768px) {
+  header .header .logo a h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  header .header .logo a h1 {
+    font-size: 4rem;
+  }
+}
+
 header .header .nav-btn {
   position: relative;
   width: 5rem;
   height: 5rem;
   cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+  header .header .nav-btn {
+    display: none;
+  }
 }
 
 header .header .nav-btn .linea {
@@ -200,6 +218,24 @@ header .header .nav-links {
   }
 }
 
+@media (min-width: 1024px) {
+  header .header .nav-links {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 60%;
+    position: relative;
+    height: auto;
+    padding: 0;
+    top: 0;
+    background: none;
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
 header .header .nav-links a {
   text-decoration: none;
   opacity: 0;
@@ -221,73 +257,123 @@ header .header .nav-links a {
   transition: all .3s ease-in-out;
   letter-spacing: .4rem;
   font-size: 2rem;
+  position: relative;
 }
 
-header .header .nav-links a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #23B8EC;
+@media (min-width: 1024px) {
+  header .header .nav-links a {
+    font-size: 1.5rem;
+    height: auto;
+    letter-spacing: normal;
+    padding: 0;
+    margin: 0 1rem;
+    opacity: 1;
+    width: auto;
+  }
+  header .header .nav-links a::after, header .header .nav-links a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: .1rem;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    background-color: #23B8EC;
+  }
+  header .header .nav-links a::after {
+    right: 0%;
+  }
+  header .header .nav-links a::before {
+    left: 0%;
+  }
 }
 
-header .header .nav-btn.menuAbierto .linea {
+@media (min-width: 1200px) {
+  header .header .nav-links a {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 1023px) {
+  header .header .nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #23B8EC;
+  }
+}
+
+@media (min-width: 1024px) {
+  header .header .nav-links a:hover {
+    color: #23B8EC;
+  }
+  header .header .nav-links a:hover::after {
+    width: 85%;
+  }
+  header .header .nav-links a:hover::before {
+    width: 85%;
+  }
+}
+
+header .nav-btn.menuAbierto .linea {
   height: .4rem;
   width: 70%;
 }
 
-header .header .nav-btn.menuAbierto .linea1 {
+header .nav-btn.menuAbierto .linea1 {
   top: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%) rotateZ(45deg);
           transform: translateX(-50%) translateY(-50%) rotateZ(45deg);
   background-color: #000;
 }
 
-header .header .nav-btn.menuAbierto .linea2 {
+header .nav-btn.menuAbierto .linea2 {
   opacity: 0;
 }
 
-header .header .nav-btn.menuAbierto .linea3 {
+header .nav-btn.menuAbierto .linea3 {
   top: 50%;
   background-color: #23B8EC;
   -webkit-transform: translateX(-50%) translateY(-50%) rotateZ(-45deg);
           transform: translateX(-50%) translateY(-50%) rotateZ(-45deg);
 }
 
-header .header .nav-links.menuAbierto {
+header .nav-links.menuAbierto {
   -webkit-transform: translateX(0);
           transform: translateX(0);
   opacity: 1;
 }
 
-header .header .nav-links.menuAbierto a {
+header .nav-links.menuAbierto a {
   -webkit-animation: appear 1.5s forwards linear;
           animation: appear 1.5s forwards linear;
 }
 
-header .header .nav-links.menuAbierto a:nth-child(1) {
+header .nav-links.menuAbierto a:nth-child(1) {
   -webkit-animation-delay: .3s;
           animation-delay: .3s;
 }
 
-header .header .nav-links.menuAbierto a:nth-child(2) {
+header .nav-links.menuAbierto a:nth-child(2) {
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
 
-header .header .nav-links.menuAbierto a:nth-child(3) {
+header .nav-links.menuAbierto a:nth-child(3) {
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
 }
 
-header .header .nav-links.menuAbierto a:nth-child(4) {
+header .nav-links.menuAbierto a:nth-child(4) {
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
 }
 
-header .header .nav-links.menuAbierto a:nth-child(5) {
+header .nav-links.menuAbierto a:nth-child(5) {
   -webkit-animation-delay: 0.7s;
           animation-delay: 0.7s;
 }
 
-header .header .nav-links.menuAbierto a:nth-child(6) {
+header .nav-links.menuAbierto a:nth-child(6) {
   -webkit-animation-delay: 0.8s;
           animation-delay: 0.8s;
 }
@@ -496,8 +582,8 @@ header .header .nav-links.menuAbierto a:nth-child(6) {
 
 .contenedor-empresa .empresa p {
   text-align: justify;
-  padding: 3rem 3rem;
   position: relative;
+  padding: 3rem 3rem;
 }
 
 @media (min-width: 768px) {
@@ -512,44 +598,36 @@ header .header .nav-links.menuAbierto a:nth-child(6) {
   }
 }
 
-.contenedor-empresa .empresa p em {
-  color: #23B8EC;
-  cursor: pointer;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-}
-
-.contenedor-empresa .empresa p em:hover::before {
-  content: "¡El anti-fog es aún más práctico en estos tiempos de pandemia, evita la molestia de desempañarse los lentes todo el tiempo!";
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  width: 100%;
-  height: auto;
-  padding: 1rem;
-  font-size: 1.1rem;
-  border-radius: 5px;
-  background-color: #05679c;
-  color: #fff;
-}
-
-@media (min-width: 480px) {
-  .contenedor-empresa .empresa p em:hover::before {
-    font-size: 1.5rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .contenedor-empresa .empresa p em:hover::before {
-    font-size: 1.75rem;
-  }
-}
-
 @media (min-width: 1024px) {
+  .contenedor-empresa .empresa p em {
+    color: #23B8EC;
+    cursor: pointer;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+  }
+  .contenedor-empresa .empresa p em:hover::before {
+    content: "¡El anti-fog es aún más práctico en estos tiempos de pandemia, evita la molestia de desempañarse los lentes todo el tiempo!";
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+    width: auto;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    background-color: #05679c;
+    color: #fff;
+  }
+}
+
+@media (min-width: 1024px) and (min-width: 1024px) {
   .contenedor-empresa .empresa p em:hover::before {
     font-size: 2rem;
+  }
+}
+
+@media (min-width: 1024px) and (min-width: 1200px) {
+  .contenedor-empresa .empresa p em:hover::before {
+    bottom: 25%;
   }
 }
 
