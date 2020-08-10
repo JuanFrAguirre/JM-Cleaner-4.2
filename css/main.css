@@ -637,7 +637,7 @@ header .nav-links.menuAbierto a:nth-child(6) {
 }
 
 .contenedor-contacto {
-  background: url(../img/cafe.JPG);
+  background-image: url(../img/cafe.JPG);
   background-size: cover;
   background-position: 80%;
   background-attachment: fixed;
